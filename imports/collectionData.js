@@ -3,3 +3,9 @@ Template.collectionData.helpers({
       return Jokes.find();
     }
   });
+  Template.collectionData.events({
+    'click .delete-joke': function(event, template) {
+      var jokeId = $(event.currentTarget).attr('data-id');
+      Jokes.remove(jokeId);
+    }
+  });

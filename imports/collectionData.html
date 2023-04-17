@@ -1,10 +1,13 @@
 <template name="collectionData">
   <div class="container-1">
-    <h1>Your Joke Collection</h1>
-    <ul class="Col">
-     {{#each jokes}}
-        <li>{{name}}: {{joke}}</li>
+    <h1>My Joke Collection</h1>
+    <ul>
+      {{#each jokes}}
+        <li>
+          {{name}}: {{joke}}
+          <button class="delete-joke" data-id="{{_id}}">remove</button>
+        </li>
       {{/each}}
-      </ul>
-    </div>
-  </template>
+    </ul>
+  </div>
+</template>
